@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get reference to domain limit selector
-    const domainLimitSelect = document.getElementById('domainLimit');
+    const domainLimitSelect = document.getElementById('domainLimit'); // Predetermined by the User's Gmail settings
 
     // Function to update the domain list display
     function updateDomainList() {
         console.log('Updating domain list...'); // Debug log
         chrome.storage.local.get(['emailStats'], function(result) {
             if (chrome.runtime.lastError) {
-                console.error(chrome.runtime.lastError);
+                console.error(chrome.runtime.lastError); // Error check
                 return;
             }
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const maxCount = Math.max(...domains.map(([, count]) => count));
 
                 domains.forEach(([domain, count]) => {
-                    const percentage = (count / maxCount) * 100;
+                    const percentage = (count / maxCount) * 100; // Percentage bars for domain count
                     
                     const domainDiv = document.createElement('div');
                     domainDiv.className = 'domain-item';
