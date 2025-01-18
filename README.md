@@ -66,14 +66,6 @@ The extension works by:
 - No data is sent to external servers
 - Only processes visible email data in the Gmail interface
 
-
-### Local Development
-
-1. Make changes to the source files
-2. Go to `chrome://extensions/`
-3. Click the refresh icon on your extension card
-4. Changes will be reflected immediately
-
 ### Troubleshooting
 
 If no data is being read/displayed:
