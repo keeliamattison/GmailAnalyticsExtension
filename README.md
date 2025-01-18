@@ -14,6 +14,10 @@ A Chrome extension that provides real-time analytics and visualization of your G
 - Auto-refreshing statistics (every 5 seconds)
 - Clean, modern user interface
 
+<div align="center">
+  <img src="EmailExtension.mp4" alt="Email Analytics Demo" width="800"/>
+</div>
+
 ## Installation
 
 1. Clone this repository:
