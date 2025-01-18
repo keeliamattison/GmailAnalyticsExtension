@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             } else {
                 console.log('No domains to display'); // Debug log
-                // Add a message when no domains are available
+                // Message for when no domains are available
                 const noDataDiv = document.createElement('div');
                 noDataDiv.textContent = 'No domain data available';
                 domainListElement.appendChild(noDataDiv);
