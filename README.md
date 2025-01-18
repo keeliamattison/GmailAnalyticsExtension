@@ -20,7 +20,7 @@ A Chrome extension that provides real-time analytics and visualization of your G
    ```bash
    git clone [repository-url]
    ```
-   1a. Or download the ZIP file and unzip it in your local File Explorer
+   1a. Or download the files and add them to a directory in your local system.
 
 2. Open Chrome and navigate to `chrome://extensions/`
 
