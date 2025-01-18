@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <!-- Title for the email analytics popup window -->
+   <title>Email Analytics</title>
+   <style>
+     /* Main container styling for the popup */
+     body {
+       width: 400px;
+       padding: 20px;
+       font-family: Arial, sans-serif;
+     }
+     /* Title section styling with custom color and border bottom */
+     .header-title {
+       color: #4f46e5;
+       font-size: 28px;
+       font-weight: 600;
+       margin: 0 0 20px 0;
+       padding-bottom: 12px;
+       border-bottom: 2px solid #e5e7eb; 
+     }
+     /* Card component styling with rounded corners and shadow */
+     .card {
+       background: #f8f9fa;
+       border-radius: 16px;
+       padding: 15px;
+       margin: 10px 0;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     }
+     /* Large statistic number styling */
+     .stat-value {
+       font-size: 24px;
+       font-weight: bold;
+       color: #4f46e5;
+     }
+     /* Statistic label styling below the number */
+     .stat-label {
+       color: #6b7280;
+       font-size: 14px;
+     }
+     /* Domain list item row styling */
+     .domain-item {
+       display: flex;
+       justify-content: space-between;
+       padding: 8px 0;
+       border-bottom: 1px solid #e5e7eb;
+     }
+     /* Progress bar background styling */
+     .progress-bar {
+       background: #e5e7eb;
+       height: 8px;
+       border-radius: 4px;
+       margin-top: 4px;
+     }
+     /* Progress bar filled portion styling */
+     .progress-fill {
+       background: #4f46e5;
+       height: 100%;
+       border-radius: 4px;
+       transition: width 0.3s ease;
+     }
+     /* Domain selection dropdown container styling */
+     .domain-selector {
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       margin-bottom: 15px;
+     }
+     /* Dropdown select element styling */
+     .domain-selector select {
+       padding: 6px 12px;
+       border-radius: 8px;
+       border: 1px solid #e5e7eb;
+       background-color: white;
+       color: #4f46e5;
+       font-size: 14px;
+       cursor: pointer;
+     }
+     /* Dropdown label styling */
+     .domain-selector label {
+       color: #6b7280;
+       font-size: 14px;
+     }
+   </style>
+ </head>
+ <body>
+   <!-- Main title header -->
+   <h1 class="header-title">Email Analytics</h1>
+
+   <!-- Total emails statistics card -->
+   <div class="card">
+     <div class="stat-value" id="emailCount">0</div>
+     <div class="stat-label">Total Emails Analyzed</div>
+   </div>
+
+   <!-- Unique domains statistics card -->
+   <div class="card">
+     <div class="stat-value" id="domainCount">0</div>
+     <div class="stat-label">Unique Email Domains (One Hit Wonders)</div>
+   </div>
+
+   <!-- Top email domains card with selector -->
+   <div class="card">
+     <h3>Top Email Domains</h3>
+     <!-- Domain count selector dropdown -->
+     <div class="domain-selector">
+       <label for="domainLimit">Show top:</label>
+       <select id="domainLimit">
+         <option value="5">5 domains</option>
+         <option value="10">10 domains</option>
+         <option value="15">15 domains</option>
+         <option value="20">20 domains</option>
+       </select>
+     </div>
+     <!-- Container for dynamically loaded domain list -->
+     <div id="domainList"></div>
+   </div>
+
+   <!-- Link to external JavaScript file -->
+   <script src="popup.js"></script>
+ </body>
+</html>
